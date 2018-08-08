@@ -16,8 +16,8 @@ RUN cd /opt \
     && unzip -qq android-sdk-tools.zip \
     && mv tools/ ${ANDROID_HOME}/tools/ \
     && rm -f android-sdk-tools.zip \
-    && yes | sdkmanager --licenses \
-    && sdkmanager "tools" \
+    && yes | sdkmanager --licenses  
+RUN sdkmanager "tools" \
     && sdkmanager "build-tools;21.1.2" \
     && sdkmanager "build-tools;22.0.1" \
     && sdkmanager "build-tools;23.0.1" \
