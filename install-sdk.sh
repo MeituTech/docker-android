@@ -1,3 +1,12 @@
+#!/bin/bash
+
+cd /opt
+wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O android-sdk-tools.zip
+unzip -qq android-sdk-tools.zip
+mv tools/ ${ANDROID_HOME}/tools/
+rm -f android-sdk-tools.zip
+yes | sdkmanager --licenses
+
 sdkmanager "tools"
 sdkmanager "build-tools;21.1.2"
 sdkmanager "build-tools;22.0.1"
