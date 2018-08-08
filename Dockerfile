@@ -16,12 +16,8 @@ RUN cd /opt \
     && unzip -qq android-sdk-tools.zip \
     && mv tools/ ${ANDROID_HOME}/tools/ \
     && rm -f android-sdk-tools.zip \
-# Accept all licenses before installing components.
     && yes | sdkmanager --licenses \
     && sdkmanager "tools" \
-# ------------------------------------------------------
-# --- Install Android SDKs and other build packages
-# build tools
     && sdkmanager "build-tools;21.1.2" \
     && sdkmanager "build-tools;22.0.1" \
     && sdkmanager "build-tools;23.0.1" \
@@ -46,14 +42,11 @@ RUN cd /opt \
     && sdkmanager "build-tools;28.0.0" \
     && sdkmanager "build-tools;28.0.1" \
     && sdkmanager "build-tools;28.0.2" \
-# Constraint Layout
     && sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0" \
     && sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1" \
     && sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0" \
     && sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1" \
-# NDK dependency, Convenient for updating. cmake only about 30MiB.
     && sdkmanager "cmake;3.6.4111459" \
-# SDKs
     && sdkmanager "platforms;android-21" \
     && sdkmanager "platforms;android-22" \
     && sdkmanager "platforms;android-23" \
@@ -62,19 +55,15 @@ RUN cd /opt \
     && sdkmanager "platforms;android-26" \
     && sdkmanager "platforms;android-27" \
     && sdkmanager "platforms;android-28" \
-# google apis
     && sdkmanager "add-ons;addon-google_apis-google-21" \
     && sdkmanager "add-ons;addon-google_apis-google-22" \
     && sdkmanager "add-ons;addon-google_apis-google-23" \
     && sdkmanager "add-ons;addon-google_apis-google-24" \
-# Platform tools
     && sdkmanager "platform-tools" \
-# Extras
     && sdkmanager "extras;android;m2repository" \
     && sdkmanager "extras;google;m2repository" \
     && sdkmanager "extras;google;google_play_services" \
     && sdkmanager "extras;google;instantapps" \
-# Cleanup
     && apt-get clean -y && apt-get autoremove -y & rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/*
 
 # Go to workspace
