@@ -17,54 +17,54 @@ RUN cd /opt \
     && mv tools/ ${ANDROID_HOME}/tools/ \
     && rm -f android-sdk-tools.zip \
     && yes | sdkmanager --licenses  
-RUN sdkmanager "tools" \
-    && sdkmanager "build-tools;21.1.2" \
-    && sdkmanager "build-tools;22.0.1" \
-    && sdkmanager "build-tools;23.0.1" \
-    && sdkmanager "build-tools;23.0.2" \
-    && sdkmanager "build-tools;23.0.3" \
-    && sdkmanager "build-tools;24.0.1" \
-    && sdkmanager "build-tools;24.0.2" \
-    && sdkmanager "build-tools;24.0.3" \
-    && sdkmanager "build-tools;24.0.0" \
-    && sdkmanager "build-tools;25.0.0" \
-    && sdkmanager "build-tools;25.0.1" \
-    && sdkmanager "build-tools;25.0.2" \
-    && sdkmanager "build-tools;25.0.3" \
-    && sdkmanager "build-tools;26.0.0" \
-    && sdkmanager "build-tools;26.0.1" \
-    && sdkmanager "build-tools;26.0.2" \
-    && sdkmanager "build-tools;26.0.3" \
-    && sdkmanager "build-tools;27.0.0" \
-    && sdkmanager "build-tools;27.0.1" \
-    && sdkmanager "build-tools;27.0.2" \
-    && sdkmanager "build-tools;27.0.3" \
-    && sdkmanager "build-tools;28.0.0" \
-    && sdkmanager "build-tools;28.0.1" \
-    && sdkmanager "build-tools;28.0.2" \
-RUN sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0" \
-    && sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1" \
-    && sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0" \
-    && sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1" \
-    && sdkmanager "cmake;3.6.4111459" \
-    && sdkmanager "platforms;android-21" \
-    && sdkmanager "platforms;android-22" \
-    && sdkmanager "platforms;android-23" \
-    && sdkmanager "platforms;android-24" \
-    && sdkmanager "platforms;android-25" \
-    && sdkmanager "platforms;android-26" \
-    && sdkmanager "platforms;android-27" \
-    && sdkmanager "platforms;android-28" \
-RUN sdkmanager "add-ons;addon-google_apis-google-21" \
-    && sdkmanager "add-ons;addon-google_apis-google-22" \
-    && sdkmanager "add-ons;addon-google_apis-google-23" \
-    && sdkmanager "add-ons;addon-google_apis-google-24" \
-    && sdkmanager "platform-tools" \
-    && sdkmanager "extras;android;m2repository" \
-    && sdkmanager "extras;google;m2repository" \
-    && sdkmanager "extras;google;google_play_services" \
-    && sdkmanager "extras;google;instantapps" \
-    && apt-get clean -y && apt-get autoremove -y & rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/*
+RUN sdkmanager "tools"
+RUN sdkmanager "build-tools;21.1.2"
+RUN sdkmanager "build-tools;22.0.1"
+RUN sdkmanager "build-tools;23.0.1"
+RUN sdkmanager "build-tools;23.0.2"
+RUN sdkmanager "build-tools;23.0.3"
+RUN sdkmanager "build-tools;24.0.1"
+RUN sdkmanager "build-tools;24.0.2"
+RUN sdkmanager "build-tools;24.0.3"
+RUN sdkmanager "build-tools;24.0.0"
+RUN sdkmanager "build-tools;25.0.0"
+RUN sdkmanager "build-tools;25.0.1"
+RUN sdkmanager "build-tools;25.0.2"
+RUN sdkmanager "build-tools;25.0.3"
+RUN sdkmanager "build-tools;26.0.0"
+RUN sdkmanager "build-tools;26.0.1"
+RUN sdkmanager "build-tools;26.0.2"
+RUN sdkmanager "build-tools;26.0.3"
+RUN sdkmanager "build-tools;27.0.0"
+RUN sdkmanager "build-tools;27.0.1"
+RUN sdkmanager "build-tools;27.0.2"
+RUN sdkmanager "build-tools;27.0.3"
+RUN sdkmanager "build-tools;28.0.0"
+RUN sdkmanager "build-tools;28.0.1"
+RUN sdkmanager "build-tools;28.0.2"
+RUN sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0"
+RUN sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1"
+RUN sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0"
+RUN sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1"
+RUN sdkmanager "cmake;3.6.4111459"
+RUN sdkmanager "platforms;android-21"
+RUN sdkmanager "platforms;android-22"
+RUN sdkmanager "platforms;android-23"
+RUN sdkmanager "platforms;android-24"
+RUN sdkmanager "platforms;android-25"
+RUN sdkmanager "platforms;android-26"
+RUN sdkmanager "platforms;android-27"
+RUN sdkmanager "platforms;android-28"
+RUN sdkmanager "add-ons;addon-google_apis-google-21"
+RUN sdkmanager "add-ons;addon-google_apis-google-22"
+RUN sdkmanager "add-ons;addon-google_apis-google-23"
+RUN sdkmanager "add-ons;addon-google_apis-google-24"
+RUN sdkmanager "platform-tools"
+RUN sdkmanager "extras;android;m2repository"
+RUN sdkmanager "extras;google;m2repository"
+RUN sdkmanager "extras;google;google_play_services"
+RUN sdkmanager "extras;google;instantapps"
+RUN apt-get clean -y && apt-get autoremove -y & rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/*
 
 # Go to workspace
 RUN mkdir -p /var/workspace
