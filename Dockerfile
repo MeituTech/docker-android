@@ -42,7 +42,7 @@ RUN sdkmanager "tools" \
     && sdkmanager "build-tools;28.0.0" \
     && sdkmanager "build-tools;28.0.1" \
     && sdkmanager "build-tools;28.0.2" \
-    && sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0" \
+RUN sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0" \
     && sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1" \
     && sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0" \
     && sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1" \
@@ -55,7 +55,7 @@ RUN sdkmanager "tools" \
     && sdkmanager "platforms;android-26" \
     && sdkmanager "platforms;android-27" \
     && sdkmanager "platforms;android-28" \
-    && sdkmanager "add-ons;addon-google_apis-google-21" \
+RUN sdkmanager "add-ons;addon-google_apis-google-21" \
     && sdkmanager "add-ons;addon-google_apis-google-22" \
     && sdkmanager "add-ons;addon-google_apis-google-23" \
     && sdkmanager "add-ons;addon-google_apis-google-24" \
