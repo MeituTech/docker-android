@@ -3,6 +3,8 @@ LABEL maintainer "Ligboy.Liu <ligboy@gmail.com>"
 
 RUN yes | sdkmanager --licenses
 
+RUN sdkmanager "build-tools;28.0.3"
+
 RUN sdkmanager "tools"
 RUN sdkmanager "cmake;3.6.4111459"
 RUN sdkmanager "platforms;android-28"
