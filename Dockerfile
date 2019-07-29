@@ -9,7 +9,6 @@ RUN sdkmanager "build-tools;29.0.1"
 
 RUN sdkmanager "tools"
 RUN sdkmanager "cmake;3.6.4111459"
-RUN sdkmanager "cmake;3.10.2.4988404"
 RUN sdkmanager "platform-tools"
 RUN sdkmanager "extras;google;google_play_services"
 RUN sdkmanager "extras;google;instantapps"
